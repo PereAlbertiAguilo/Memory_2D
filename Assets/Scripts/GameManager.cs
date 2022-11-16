@@ -79,25 +79,19 @@ public class GameManager : MonoBehaviour
         if (!firstGuess)
         {
             firstGuess = true;
-
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
-
             firstGuessName = piecesImages[firstGuessIndex].name;
 
             buttons[firstGuessIndex].image.sprite = piecesImages[firstGuessIndex];
-
             buttons[firstGuessIndex].interactable = false;
         }
         else if (!secondGuess)
         {
             secondGuess = true;
-
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
-
             secondGuessName = piecesImages[secondGuessIndex].name;
 
             buttons[secondGuessIndex].image.sprite = piecesImages[secondGuessIndex];
-
             buttons[firstGuessIndex].interactable = true;
 
             guessCounter++;
@@ -108,11 +102,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckIfNamesMatch()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
 
         if(firstGuessName == secondGuessName)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
 
             buttons[firstGuessIndex].interactable = false;
             buttons[secondGuessIndex].interactable = false;
@@ -124,14 +118,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
 
             buttons[firstGuessIndex].image.sprite = buttonSprite;
             buttons[secondGuessIndex].image.sprite = buttonSprite;
         }
-
-        yield return new WaitForSeconds(0.5f);
-
         firstGuess = false;
         secondGuess = false;
     }
