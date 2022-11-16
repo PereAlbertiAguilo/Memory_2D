@@ -23,10 +23,12 @@ public class GameManager : MonoBehaviour
 
     private string firstGuessName, secondGuessName; 
 
+    /*
     private void Awake()
     {
-        imagesSprites = Resources.LoadAll<Sprite>("Sprites/images");
+        imageSprites = Resources.LoadAll<Sprite>("Sprites/images");
     }
+    */
 
     private void Start()
     {
