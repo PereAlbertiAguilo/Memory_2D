@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: xdddn't_0
+      name: image_0
       rect:
         serializedVersion: 2
         x: 1
@@ -113,7 +113,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_1
+      name: image_1
       rect:
         serializedVersion: 2
         x: 55
@@ -134,7 +134,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_2
+      name: image_2
       rect:
         serializedVersion: 2
         x: 109
@@ -155,7 +155,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_3
+      name: image_3
       rect:
         serializedVersion: 2
         x: 163
@@ -176,7 +176,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_4
+      name: image_4
       rect:
         serializedVersion: 2
         x: 217
@@ -197,7 +197,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_5
+      name: image_5
       rect:
         serializedVersion: 2
         x: 1
@@ -218,7 +218,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_6
+      name: image_6
       rect:
         serializedVersion: 2
         x: 55
@@ -239,7 +239,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_7
+      name: image_7
       rect:
         serializedVersion: 2
         x: 109
@@ -260,7 +260,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_8
+      name: image_8
       rect:
         serializedVersion: 2
         x: 163
@@ -281,7 +281,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_9
+      name: image_9
       rect:
         serializedVersion: 2
         x: 217
@@ -302,7 +302,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_10
+      name: image_10
       rect:
         serializedVersion: 2
         x: 1
@@ -323,7 +323,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_11
+      name: image_11
       rect:
         serializedVersion: 2
         x: 55
@@ -344,7 +344,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_12
+      name: image_12
       rect:
         serializedVersion: 2
         x: 109
@@ -365,7 +365,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_13
+      name: image_13
       rect:
         serializedVersion: 2
         x: 163
@@ -386,7 +386,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_14
+      name: image_14
       rect:
         serializedVersion: 2
         x: 217
@@ -407,7 +407,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,15 +420,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_15
+      name: image_15
       rect:
         serializedVersion: 2
         x: 1
-        y: 110
+        y: 111
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,15 +441,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_16
+      name: image_16
       rect:
         serializedVersion: 2
-        x: 55
-        y: 110
+        x: 54
+        y: 109
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_17
+      name: image_17
       rect:
         serializedVersion: 2
         x: 109
@@ -470,7 +470,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,7 +483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_18
+      name: image_18
       rect:
         serializedVersion: 2
         x: 163
@@ -491,7 +491,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,7 +504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_19
+      name: image_19
       rect:
         serializedVersion: 2
         x: 217
@@ -512,7 +512,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,7 +525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_20
+      name: image_20
       rect:
         serializedVersion: 2
         x: 1
@@ -533,7 +533,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,7 +546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_21
+      name: image_21
       rect:
         serializedVersion: 2
         x: 55
@@ -554,7 +554,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_22
+      name: image_22
       rect:
         serializedVersion: 2
         x: 109
@@ -575,7 +575,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,7 +588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_23
+      name: image_23
       rect:
         serializedVersion: 2
         x: 163
@@ -596,7 +596,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,7 +609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_24
+      name: image_24
       rect:
         serializedVersion: 2
         x: 217
@@ -617,7 +617,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -630,7 +630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_25
+      name: image_25
       rect:
         serializedVersion: 2
         x: 1
@@ -638,7 +638,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -651,15 +651,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_26
+      name: image_26
       rect:
         serializedVersion: 2
-        x: 55
+        x: 54
         y: 2
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,7 +672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_27
+      name: image_27
       rect:
         serializedVersion: 2
         x: 109
@@ -680,7 +680,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -693,7 +693,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_28
+      name: image_28
       rect:
         serializedVersion: 2
         x: 163
@@ -701,7 +701,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -714,7 +714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xdddn't_29
+      name: image_29
       rect:
         serializedVersion: 2
         x: 217
@@ -722,7 +722,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -745,36 +745,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      xdddn't_1: 1414871764
-      xdddn't_15: -1389403535
-      xdddn't_26: -693496379
-      xdddn't_19: -1367081134
-      xdddn't_24: -693763390
-      xdddn't_22: -818290488
-      xdddn't_21: 61976246
-      xdddn't_8: -1159126422
-      xdddn't_9: -532335244
-      xdddn't_14: -1208803385
-      xdddn't_23: -1779370462
-      xdddn't_12: 1693512614
-      xdddn't_5: -801498733
-      xdddn't_25: 1414953285
-      xdddn't_18: 139631436
-      xdddn't_4: -1505528502
-      xdddn't_16: -1554271237
-      xdddn't_27: -1790950673
-      xdddn't_13: -1831693736
-      xdddn't_3: -1977411709
-      xdddn't_11: 1108870991
-      xdddn't_28: 1106210752
-      xdddn't_6: -1286832168
-      xdddn't_0: -2108003274
-      xdddn't_20: 1843044767
-      xdddn't_2: -1875533991
-      xdddn't_7: -118463999
-      xdddn't_29: 2046654779
-      xdddn't_10: -1139630860
-      xdddn't_17: 2035473320
+      image_24: -693763390
+      image_26: -693496379
+      image_9: -532335244
+      image_3: -1977411709
+      image_29: 2046654779
+      image_10: -1139630860
+      image_17: 2035473320
+      image_13: -1831693736
+      image_0: -2108003274
+      image_15: -1389403535
+      image_4: -1505528502
+      image_22: -818290488
+      image_23: -1779370462
+      image_20: 1843044767
+      image_28: 1106210752
+      image_5: -801498733
+      image_12: 1693512614
+      image_11: 1108870991
+      image_16: -1554271237
+      image_21: 61976246
+      image_25: 1414953285
+      image_27: -1790950673
+      image_14: -1208803385
+      image_7: -118463999
+      image_2: -1875533991
+      image_6: -1286832168
+      image_8: -1159126422
+      image_19: -1367081134
+      image_1: 1414871764
+      image_18: 139631436
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
