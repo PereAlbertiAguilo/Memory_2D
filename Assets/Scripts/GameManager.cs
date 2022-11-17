@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] imagesSprites;
 
-    public List<Sprite> piecesImages = new List<Sprite>();
+    private List<Sprite> piecesImages = new List<Sprite>();
 
-    public List<Button> buttons = new List<Button>();
+    private List<Button> buttons = new List<Button>();
 
     public TextMeshProUGUI attempts;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI currentScore;
+    public TextMeshProUGUI bestScoreText;
 
     public GameObject gameOverPanel;
     public Image gameOverImage;
@@ -30,13 +32,18 @@ public class GameManager : MonoBehaviour
     private int correctGuessCounter;
     private int totalGuesses;
     private int firstGuessIndex, secondGuessIndex;
+    private int bestScore;
+    private int bestTime;
 
     [SerializeField] private float timeRemaining = 60.0f;
+    private float maxTime;
 
     private string firstGuessName, secondGuessName; 
 
     private void Start()
     {
+        maxTime = timeRemaining;
+
         ButtonsList();
         AddFunction();
         AddPieces();
@@ -45,8 +52,17 @@ public class GameManager : MonoBehaviour
         totalGuesses = piecesImages.Count / 2;
 
         isGameOver = false;
+
+        if (PlayerPrefs.HasKey("BestTime"))
+        {
+            bestScore = PlayerPrefs.GetInt("BestScore");
+        }
+        if (PlayerPrefs.HasKey("BestTime"))
+        {
+            bestTime = PlayerPrefs.GetInt("BestTime");
+        }
     }
-    
+
     private void Update()
     {
         if (isTimerOn)
@@ -84,6 +100,8 @@ public class GameManager : MonoBehaviour
             button.interactable = true;
         }
         RandomizePiecesOrder(piecesImages);
+        timeRemaining = maxTime;
+        isTimerOn = true;
         guessCounter = 0;
         correctGuessCounter = 0;
     }
@@ -212,13 +230,32 @@ public class GameManager : MonoBehaviour
             gameOverPanel.SetActive(true);
             isTimerOn = false;
 
+            /*
+            if (guessCounter <= bestScore)
+            {
+                bestScore = guessCounter;
+                PlayerPrefs.SetInt("BestScore", bestScore);
+            }
+
+            if (timeRemaining <= bestTime)
+            {
+                int seconds = Mathf.FloorToInt(timeRemaining % 60);
+                bestTime = seconds;
+                PlayerPrefs.SetInt("BestTime", bestTime);
+            }
+            */
+
+            //bestScoreText.text = $"Best attempts: {bestScore} Best time: {bestTime}";
+
             if (victory)
             {
                 gameOverImage.sprite = Resources.Load<Sprite>("Sprites/victory");
+                currentScore.text = $"You used {guessCounter} attempts and had {Mathf.Round(timeRemaining)} seconds left";
             }
             else
             {
                 gameOverImage.sprite = Resources.Load<Sprite>("Sprites/defeat");
+                currentScore.text = $"Good luck next time, you can try again as many times as you want";
             }
         }
     }
