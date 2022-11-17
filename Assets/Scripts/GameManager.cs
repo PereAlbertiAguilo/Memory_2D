@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,22 +14,26 @@ public class GameManager : MonoBehaviour
 
     public List<Button> buttons = new List<Button>();
 
+    public TextMeshProUGUI attempts;
+    public TextMeshProUGUI timerText;
+
+    public GameObject gameOverPanel;
+    public Image gameOverImage;
 
     private bool firstGuess, secondGuess;
+    public bool isGameOver;
+
+    private bool victory;
+    private bool isTimerOn = true;
 
     private int guessCounter;
     private int correctGuessCounter;
     private int totalGuesses;
     private int firstGuessIndex, secondGuessIndex;
 
-    private string firstGuessName, secondGuessName; 
+    [SerializeField] private float timeRemaining = 60.0f;
 
-    /*
-    private void Awake()
-    {
-        imageSprites = Resources.LoadAll<Sprite>("Sprites/images");
-    }
-    */
+    private string firstGuessName, secondGuessName; 
 
     private void Start()
     {
@@ -38,6 +43,49 @@ public class GameManager : MonoBehaviour
         RandomizePiecesOrder(piecesImages);
 
         totalGuesses = piecesImages.Count / 2;
+
+        isGameOver = false;
+    }
+    
+    private void Update()
+    {
+        if (isTimerOn)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+
+        if (timeRemaining <= 0.0f)
+        {
+            timeRemaining = 0;
+            victory = false;
+            isGameOver = true;
+            GameOver();
+        }
+
+        Timer();
+
+        attempts.text = "Attempts : " + guessCounter;
+    }
+
+    private void Timer()
+    {
+        float minutes = Mathf.FloorToInt(timeRemaining / 60);
+        float seconds = Mathf.FloorToInt(timeRemaining % 60);
+
+        timerText.text = $"{minutes} : {seconds}";
+    }
+
+    public void ResetGame()
+    {
+        foreach (Button button in buttons)
+        {
+            button.image.sprite = buttonSprite;
+            button.image.color = new Color(1, 1, 1, 1);
+            button.interactable = true;
+        }
+        RandomizePiecesOrder(piecesImages);
+        guessCounter = 0;
+        correctGuessCounter = 0;
     }
 
     void ButtonsList()
@@ -142,6 +190,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
     void IsGameOver()
     {
         correctGuessCounter++;
@@ -149,7 +199,27 @@ public class GameManager : MonoBehaviour
         if(correctGuessCounter == totalGuesses)
         {
             print("gameover");
+            isGameOver = true;
+            victory = true;
+            GameOver();
         }
     }
 
+    void GameOver()
+    {
+        if (isGameOver)
+        {
+            gameOverPanel.SetActive(true);
+            isTimerOn = false;
+
+            if (victory)
+            {
+                gameOverImage.sprite = Resources.Load<Sprite>("Sprites/victory");
+            }
+            else
+            {
+                gameOverImage.sprite = Resources.Load<Sprite>("Sprites/defeat");
+            }
+        }
+    }
 }

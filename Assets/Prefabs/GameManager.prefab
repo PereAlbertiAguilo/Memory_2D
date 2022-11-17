@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7810504082302776260}
   - component: {fileID: 7810504082302776261}
   - component: {fileID: 7810504082302776259}
+  - component: {fileID: 2796120748370511566}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -60,7 +61,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92af95cca6c95314baf1274322b65f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSprite: {fileID: -1849920871, guid: 83014c1a7f2b1f9439531e89360e421d, type: 3}
+  buttonSprite: {fileID: 1966165684, guid: 88dac0b4d42bb424096ecdc9b9193ea7, type: 3}
   imagesSprites: []
   piecesImages: []
   buttons: []
+--- !u!114 &2796120748370511566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810504082302776262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba74bba745451746b53883ac88ae105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
