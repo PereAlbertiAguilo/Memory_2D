@@ -25,15 +25,14 @@ public class GameManager : MonoBehaviour
     private bool firstGuess, secondGuess;
     public bool isGameOver;
 
-    private bool victory;
+    public bool victory;
     private bool isTimerOn = true;
 
-    private int guessCounter;
+    public int guessCounter;
     private int correctGuessCounter;
     private int totalGuesses;
     private int firstGuessIndex, secondGuessIndex;
-    private int bestScore;
-    private int bestTime;
+    
 
     [SerializeField] private float timeRemaining = 60.0f;
     private float maxTime;
@@ -52,15 +51,6 @@ public class GameManager : MonoBehaviour
         totalGuesses = piecesImages.Count / 2;
 
         isGameOver = false;
-
-        if (PlayerPrefs.HasKey("BestTime"))
-        {
-            bestScore = PlayerPrefs.GetInt("BestScore");
-        }
-        if (PlayerPrefs.HasKey("BestTime"))
-        {
-            bestTime = PlayerPrefs.GetInt("BestTime");
-        }
     }
 
     private void Update()
@@ -68,6 +58,7 @@ public class GameManager : MonoBehaviour
         if (isTimerOn)
         {
             timeRemaining -= Time.deltaTime;
+            victory = false;
         }
 
         if (timeRemaining <= 0.0f)
@@ -231,13 +222,13 @@ public class GameManager : MonoBehaviour
             isTimerOn = false;
 
             /*
-            if (guessCounter <= bestScore)
+            if (guessCounter <= bestScore || bestScore == 0)
             {
                 bestScore = guessCounter;
                 PlayerPrefs.SetInt("BestScore", bestScore);
             }
 
-            if (timeRemaining <= bestTime)
+            if (timeRemaining <= bestTime || bestTime == 0)
             {
                 int seconds = Mathf.FloorToInt(timeRemaining % 60);
                 bestTime = seconds;

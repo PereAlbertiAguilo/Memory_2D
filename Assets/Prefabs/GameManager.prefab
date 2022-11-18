@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7810504082302776261}
   - component: {fileID: 7810504082302776259}
   - component: {fileID: 2796120748370511566}
+  - component: {fileID: 661299903}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -62,9 +63,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSprite: {fileID: 1966165684, guid: 88dac0b4d42bb424096ecdc9b9193ea7, type: 3}
-  imagesSprites: []
-  piecesImages: []
-  buttons: []
+  imagesSprites:
+  - {fileID: -1505528502, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1693512614, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 2035473320, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -1367081134, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414953285, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -693496379, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1106210752, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -2108003274, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -1875533991, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -1977411709, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -1159126422, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -118463999, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -1139630860, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: -1208803385, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 139631436, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  - {fileID: 1414871764, guid: e23c3c485ecf2c74eb25b011d223ab7c, type: 3}
+  attempts: {fileID: 0}
+  timerText: {fileID: 0}
+  currentScore: {fileID: 0}
+  bestScoreText: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  gameOverImage: {fileID: 0}
+  isGameOver: 0
+  victory: 0
+  guessCounter: 0
+  timeRemaining: 90
 --- !u!114 &2796120748370511566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,3 +117,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 0}
+--- !u!114 &661299903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810504082302776262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95734b024c767364ea9148c09c5fd3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
