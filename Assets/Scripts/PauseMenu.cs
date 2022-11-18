@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     private bool isPaused;
 
     [SerializeField] private GameObject pausePanel;
+
+    [SerializeField] private AudioSource _musicAudioSource;
+    [SerializeField] private AudioSource _sfxAduioSource;
     
 
     private void Start()
     {
-        Resume();
+        CurrentButton(GameObject.Find("0"));
     }
 
     private void Update()
@@ -30,6 +34,12 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    void CurrentButton(GameObject g)
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(g);
+    }
+
     public void Pause()
     {
         if (!GetComponent<GameManager>().isGameOver)
@@ -37,6 +47,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = true;
             Time.timeScale = 0;
             pausePanel.SetActive(true);
+            CurrentButton(GameObject.Find("Resume"));
         }
     }
 
@@ -47,6 +58,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1;
             pausePanel.SetActive(false);
+            CurrentButton(GameObject.Find("0"));
         }
     }
 
@@ -55,11 +67,55 @@ public class PauseMenu : MonoBehaviour
         Resume();
         GetComponent<GameManager>().gameOverPanel.SetActive(false);
         GetComponent<GameManager>().ResetGame();
+        CurrentButton(GameObject.Find("0"));
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+    public void MusicToggle(bool b)
+    {
+        if (b)
+        {
+            _musicAudioSource.Play();
+        }
+        else
+        {
+            _musicAudioSource.Pause();
+        }
+    }
+
+    public void SFXToggle(bool b)
+    {
+        if (b)
+        {
+            _sfxAduioSource.mute = false;
+        }
+        else
+        {
+            _sfxAduioSource.mute = true;
+        }
+    }
+    public void NextGame()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        int newScene = scene += 1;
+        if(scene < 4)
+        {
+            SceneManager.LoadScene(newScene);
+        }
+    }
+
+    public void PreviousGame()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        int newScene = scene -= 1;
+        if (scene > 1)
+        {
+            SceneManager.LoadScene(newScene);
+        }
     }
 }

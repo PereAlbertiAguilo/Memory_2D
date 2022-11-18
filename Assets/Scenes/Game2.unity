@@ -141,6 +141,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 348107593363723981, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2066535257}
+    - target: {fileID: 348107593363723981, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SFXToggle
+      objectReference: {fileID: 0}
     - target: {fileID: 999963236572451951, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -244,6 +252,30 @@ PrefabInstance:
     - target: {fileID: 999963237562415554, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932995404394035635, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2066535257}
+    - target: {fileID: 1932995404394035635, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MusicToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509274047916350162, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2066535257}
+    - target: {fileID: 5509274047916350162, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PreviousGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952062445117947619, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2066535257}
+    - target: {fileID: 8952062445117947619, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
@@ -502,6 +534,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1104826829318147716, guid: 550fa61aac88bdd469e38a16b518dc2a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e9bb03bc99efe734aae98ba89bf8eb29, type: 3}
     - target: {fileID: 2796120748370511566, guid: 550fa61aac88bdd469e38a16b518dc2a, type: 3}
       propertyPath: pausePanel
       value: 

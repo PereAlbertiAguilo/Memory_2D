@@ -2,135 +2,97 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class BestScore : MonoBehaviour
 {
-    private int bestScore1, bestScore2, bestScore3, bestScore4;
+    public int bestScore1, bestScore2, bestScore3, bestScore4;
 
     private void Start()
     {
-        print(""+ PlayerPrefs.GetInt("BestScore1") + PlayerPrefs.GetInt("BestScore2") + PlayerPrefs.GetInt("BestScore3") + PlayerPrefs.GetInt("BestScore4"));
-
         if (PlayerPrefs.HasKey("BestScore1"))
         {
             bestScore1 = PlayerPrefs.GetInt("BestScore1");
-            if (SceneManager.GetActiveScene().buildIndex == 1)
-            {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {bestScore1}";
-            }
         }
+
         if (PlayerPrefs.HasKey("BestScore2"))
         {
-            bestScore1 = PlayerPrefs.GetInt("BestScore2");
-            if (SceneManager.GetActiveScene().buildIndex == 2)
-            {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {bestScore2}";
-            }
+            bestScore2 = PlayerPrefs.GetInt("BestScore2");
         }
+
         if (PlayerPrefs.HasKey("BestScore3"))
         {
-            bestScore1 = PlayerPrefs.GetInt("BestScore3");
-            if (SceneManager.GetActiveScene().buildIndex == 3)
-            {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {bestScore3}";
-            }
+            bestScore3 = PlayerPrefs.GetInt("BestScore3");
         }
+
         if (PlayerPrefs.HasKey("BestScore4"))
         {
-            bestScore1 = PlayerPrefs.GetInt("BestScore4");
-            if (SceneManager.GetActiveScene().buildIndex == 4)
-            {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {bestScore4}";
-            }
+            bestScore4 = PlayerPrefs.GetInt("BestScore4");
         }
     }
 
-    private void Update()
+    public void BestScore1(int i, TextMeshProUGUI t)
     {
-        if (GetComponent<GameManager>().isGameOver && GetComponent<GameManager>().victory)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (bestScore1 > i || bestScore1 == 0)
             {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore1")}";
-
-                if (GetComponent<GameManager>().guessCounter < bestScore1 || bestScore1 == 0 || bestScore1 == 1 || bestScore1 == 2)
-                {
-                    bestScore1 = GetComponent<GameManager>().guessCounter;
-                    PlayerPrefs.SetInt("BestScore1", bestScore1);
-                }
-
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore1")}";
+                bestScore1 = i;
+                PlayerPrefs.SetInt("BestScore1", bestScore1);
+                t.text = $"Best attempts: {bestScore1}";
             }
-            if (SceneManager.GetActiveScene().buildIndex == 2)
+            else
             {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore2")}";
-
-                if (GetComponent<GameManager>().guessCounter < bestScore2 || bestScore2 == 0 || bestScore2 == 1 || bestScore2 == 2)
-                {
-                    bestScore2 = GetComponent<GameManager>().guessCounter;
-                    PlayerPrefs.SetInt("BestScore2", bestScore2);
-                }
-
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore2")}";
+                t.text = $"Best attempts: {bestScore1}";
             }
-            if (SceneManager.GetActiveScene().buildIndex == 3)
-            {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore3")}";
-
-                if (GetComponent<GameManager>().guessCounter < bestScore3 || bestScore3 == 0 || bestScore3 == 1 || bestScore3 == 2)
-                {
-                    bestScore3 = GetComponent<GameManager>().guessCounter;
-                    PlayerPrefs.SetInt("BestScore3", bestScore3);
-                }
-
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore3")}";
-            }
-            if (SceneManager.GetActiveScene().buildIndex == 4)
-            {
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore4")}";
-
-                if (GetComponent<GameManager>().guessCounter < bestScore4 || bestScore4 == 0 || bestScore4 == 1 || bestScore4 == 2)
-                {
-                    bestScore4 = GetComponent<GameManager>().guessCounter;
-                    PlayerPrefs.SetInt("BestScore4", bestScore4);
-                }
-
-                GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt("BestScore4")}";
-            }
-            /*
-            if (GetComponent<GameManager>().victory)
-            {
-                
-
-
-
-
-                
-                BestScoreManager(bestScore1, 1, "BestScore1");
-                BestScoreManager(bestScore2, 2, "BestScore2");
-                BestScoreManager(bestScore3, 3, "BestScore3");
-                BestScoreManager(bestScore4, 4, "BestScore4");
-                
-                print("" + bestScore1 + bestScore2 + bestScore3 + bestScore4);
-                
-            }
-            */
         }
     }
-
-    /*
-    void BestScoreManager(int i, int scene, string key)
+    public void BestScore2(int i, TextMeshProUGUI t)
     {
-        if (SceneManager.GetActiveScene().buildIndex == scene)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            if (GetComponent<GameManager>().guessCounter <= i || i == 0)
+            if (bestScore2 > i || bestScore2 == 0)
             {
-                i = GetComponent<GameManager>().guessCounter;
-                PlayerPrefs.SetInt(key, i);
+                bestScore2 = i;
+                PlayerPrefs.SetInt("BestScore2", bestScore2);
+                t.text = $"Best attempts: {bestScore2}";
             }
-
-            GetComponent<GameManager>().bestScoreText.text = $"Best attempts: {PlayerPrefs.GetInt(key)}";
+            else
+            {
+                t.text = $"Best attempts: {bestScore2}";
+            }
         }
     }
-    */
+    public void BestScore3(int i, TextMeshProUGUI t)
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            if (bestScore3 > i || bestScore3 == 0)
+            {
+                bestScore3 = i;
+                PlayerPrefs.SetInt("BestScore3", bestScore3);
+                t.text = $"Best attempts: {bestScore3}";
+            }
+            else
+            {
+                t.text = $"Best attempts: {bestScore3}";
+            }
+        }
+    }
+    public void BestScore4(int i, TextMeshProUGUI t)
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            if (bestScore4 > i || bestScore4 == 0)
+            {
+                bestScore4 = i;
+                PlayerPrefs.SetInt("BestScore4", bestScore4);
+                t.text = $"Best attempts: {bestScore4}";
+            }
+            else
+            {
+                t.text = $"Best attempts: {bestScore4}";
+            }
+        }
+    }
 }

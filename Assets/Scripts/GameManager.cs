@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -55,6 +57,19 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            if(EventSystem.current.currentSelectedGameObject == null)
+            {
+                EventSystem.current.SetSelectedGameObject(GameObject.Find("" + i));
+            }
+            
+            if (i == buttons.Count)
+            {
+                i = 0;
+            }
+        }
+
         if (isTimerOn)
         {
             timeRemaining -= Time.deltaTime;
@@ -66,6 +81,7 @@ public class GameManager : MonoBehaviour
             timeRemaining = 0;
             victory = false;
             isGameOver = true;
+            gameOverPanel.SetActive(true);
             GameOver();
         }
 
@@ -84,17 +100,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
-        foreach (Button button in buttons)
-        {
-            button.image.sprite = buttonSprite;
-            button.image.color = new Color(1, 1, 1, 1);
-            button.interactable = true;
-        }
-        RandomizePiecesOrder(piecesImages);
-        timeRemaining = maxTime;
-        isTimerOn = true;
-        guessCounter = 0;
-        correctGuessCounter = 0;
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene);
     }
 
     void ButtonsList()
@@ -135,14 +142,19 @@ public class GameManager : MonoBehaviour
 
     public void ButtonSelected()
     {
+        bool canClick = true;
+
         if (!firstGuess)
         {
-            firstGuess = true;
-            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
-            firstGuessName = piecesImages[firstGuessIndex].name;
+            if (canClick)
+            {
+                firstGuess = true;
+                firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+                firstGuessName = piecesImages[firstGuessIndex].name;
 
-            buttons[firstGuessIndex].image.sprite = piecesImages[firstGuessIndex];
-            buttons[firstGuessIndex].interactable = false;
+                buttons[firstGuessIndex].image.sprite = piecesImages[firstGuessIndex];
+                canClick = false;
+            }
         }
         else if (!secondGuess)
         {
@@ -151,7 +163,7 @@ public class GameManager : MonoBehaviour
             secondGuessName = piecesImages[secondGuessIndex].name;
 
             buttons[secondGuessIndex].image.sprite = piecesImages[secondGuessIndex];
-            buttons[firstGuessIndex].interactable = true;
+            canClick = true;
 
             guessCounter++;
 
@@ -199,17 +211,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
     void IsGameOver()
     {
         correctGuessCounter++;
 
         if(correctGuessCounter == totalGuesses)
         {
-            print("gameover");
-            isGameOver = true;
+            GetComponent<BestScore>().BestScore1(guessCounter, bestScoreText);
+            GetComponent<BestScore>().BestScore2(guessCounter, bestScoreText);
+            GetComponent<BestScore>().BestScore3(guessCounter, bestScoreText);
+            GetComponent<BestScore>().BestScore4(guessCounter, bestScoreText);
+            isTimerOn = false;
             victory = true;
+            isGameOver = true;
+            gameOverPanel.SetActive(true);
             GameOver();
         }
     }
@@ -218,25 +233,8 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            gameOverPanel.SetActive(true);
-            isTimerOn = false;
-
-            /*
-            if (guessCounter <= bestScore || bestScore == 0)
-            {
-                bestScore = guessCounter;
-                PlayerPrefs.SetInt("BestScore", bestScore);
-            }
-
-            if (timeRemaining <= bestTime || bestTime == 0)
-            {
-                int seconds = Mathf.FloorToInt(timeRemaining % 60);
-                bestTime = seconds;
-                PlayerPrefs.SetInt("BestTime", bestTime);
-            }
-            */
-
-            //bestScoreText.text = $"Best attempts: {bestScore} Best time: {bestTime}";
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(GameObject.Find("Restart2"));
 
             if (victory)
             {
