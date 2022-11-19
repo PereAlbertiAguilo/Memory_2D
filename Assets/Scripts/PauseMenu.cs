@@ -10,8 +10,8 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private GameObject pausePanel;
 
-    [SerializeField] private AudioSource _musicAudioSource;
-    [SerializeField] private AudioSource _sfxAduioSource;
+    public AudioSource _musicAudioSource;
+    public AudioSource _sfxAduioSource;
     
 
     private void Start()
@@ -58,7 +58,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1;
             pausePanel.SetActive(false);
-            CurrentButton(GameObject.Find("0"));
+            GetComponent<GameManager>().NullButton();
         }
     }
 
@@ -103,7 +103,7 @@ public class PauseMenu : MonoBehaviour
     {
         int scene = SceneManager.GetActiveScene().buildIndex;
         int newScene = scene += 1;
-        if(scene < 4)
+        if(newScene < 5)
         {
             SceneManager.LoadScene(newScene);
         }
@@ -113,7 +113,7 @@ public class PauseMenu : MonoBehaviour
     {
         int scene = SceneManager.GetActiveScene().buildIndex;
         int newScene = scene -= 1;
-        if (scene > 1)
+        if (newScene > 0)
         {
             SceneManager.LoadScene(newScene);
         }

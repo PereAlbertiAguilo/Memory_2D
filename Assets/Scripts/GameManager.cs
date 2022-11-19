@@ -57,18 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < buttons.Count; i++)
-        {
-            if(EventSystem.current.currentSelectedGameObject == null)
-            {
-                EventSystem.current.SetSelectedGameObject(GameObject.Find("" + i));
-            }
-            
-            if (i == buttons.Count)
-            {
-                i = 0;
-            }
-        }
+        NullButton();
 
         if (isTimerOn)
         {
@@ -88,6 +77,14 @@ public class GameManager : MonoBehaviour
         Timer();
 
         attempts.text = "Attempts : " + guessCounter;
+    }
+
+    public void NullButton()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(FindObjectOfType<Button>().gameObject);
+        }
     }
 
     private void Timer()
@@ -142,28 +139,23 @@ public class GameManager : MonoBehaviour
 
     public void ButtonSelected()
     {
-        bool canClick = true;
-
         if (!firstGuess)
         {
-            if (canClick)
-            {
-                firstGuess = true;
-                firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
-                firstGuessName = piecesImages[firstGuessIndex].name;
+            GetComponent<SoundEffects>().ClickSound();
+            firstGuess = true;
+            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            firstGuessName = piecesImages[firstGuessIndex].name;
 
-                buttons[firstGuessIndex].image.sprite = piecesImages[firstGuessIndex];
-                canClick = false;
-            }
+            buttons[firstGuessIndex].image.sprite = piecesImages[firstGuessIndex];
         }
-        else if (!secondGuess)
+        else if (!secondGuess && EventSystem.current.currentSelectedGameObject != buttons[firstGuessIndex].gameObject)
         {
+            GetComponent<SoundEffects>().ClickSound();
             secondGuess = true;
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             secondGuessName = piecesImages[secondGuessIndex].name;
 
             buttons[secondGuessIndex].image.sprite = piecesImages[secondGuessIndex];
-            canClick = true;
 
             guessCounter++;
 
@@ -173,7 +165,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckIfNamesMatch()
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.6f);
 
         if(firstGuessName == secondGuessName)
         {
