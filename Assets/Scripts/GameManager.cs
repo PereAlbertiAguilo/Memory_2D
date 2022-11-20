@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour
     {
         if (!firstGuess)
         {
+            GetComponent<ParticleEffect>().ParticleInstance(EventSystem.current.currentSelectedGameObject.transform.position);
             GetComponent<SoundEffects>().ClickSound();
             firstGuess = true;
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
@@ -150,6 +151,7 @@ public class GameManager : MonoBehaviour
         }
         else if (!secondGuess && EventSystem.current.currentSelectedGameObject != buttons[firstGuessIndex].gameObject)
         {
+            GetComponent<ParticleEffect>().ParticleInstance(EventSystem.current.currentSelectedGameObject.transform.position);
             GetComponent<SoundEffects>().ClickSound();
             secondGuess = true;
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);

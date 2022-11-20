@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Piece
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - particles
   - 
   - 
   - 
@@ -41,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 1744240717
+    locked: 0
+  - name: 2
+    uniqueID: 3397268157
+    locked: 0
+  - name: 3
+    uniqueID: 1493652857
     locked: 0

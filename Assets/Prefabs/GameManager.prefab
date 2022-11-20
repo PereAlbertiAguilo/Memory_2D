@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2796120748370511566}
   - component: {fileID: 661299903}
   - component: {fileID: 4005599930148690675}
+  - component: {fileID: 5694801341553234131}
   - component: {fileID: 1104826829318147716}
   - component: {fileID: 8858120351318502791}
   m_Layer: 0
@@ -154,6 +155,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 8300000, guid: a81c57085e4fe2c4d92e607dcc82831e, type: 3}
   clickSound2: {fileID: 8300000, guid: cc1bfbae570a10b4588b83e93919a1ef, type: 3}
+--- !u!114 &5694801341553234131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810504082302776262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9722ee0915b6f340b0fe41552744e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 7376863115024181191, guid: 80d8331ded686304bacef06c8092f5f9, type: 3}
 --- !u!82 &1104826829318147716
 AudioSource:
   m_ObjectHideFlags: 0

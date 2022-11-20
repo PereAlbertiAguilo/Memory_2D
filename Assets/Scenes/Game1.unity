@@ -260,10 +260,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8133432694523261983, guid: 7e1b09f65f599cb448f1efb399c4dee4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1384931858}
+    - target: {fileID: 8133432694523261983, guid: 7e1b09f65f599cb448f1efb399c4dee4, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8133432695001793052, guid: 7e1b09f65f599cb448f1efb399c4dee4, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 05d7275086f6e3e489b74728bee28ba0, type: 3}
+    - target: {fileID: 8133432695001793121, guid: 7e1b09f65f599cb448f1efb399c4dee4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8133432695001793123, guid: 7e1b09f65f599cb448f1efb399c4dee4, type: 3}
       propertyPath: m_ConstraintCount
       value: 3
@@ -384,9 +396,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 999963237324572692, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1384931858}
+    - target: {fileID: 999963237324572692, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1744240717
+      objectReference: {fileID: 0}
     - target: {fileID: 999963237324572695, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 999963237324572695, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 999963237338238587, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -553,7 +577,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -576,7 +600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384931855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -728,6 +752,10 @@ PrefabInstance:
     - target: {fileID: 7810504082302776262, guid: 550fa61aac88bdd469e38a16b518dc2a, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810504082302776262, guid: 550fa61aac88bdd469e38a16b518dc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8858120351318502791, guid: 550fa61aac88bdd469e38a16b518dc2a, type: 3}
       propertyPath: Mute
