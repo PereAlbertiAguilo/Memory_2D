@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
         totalGuesses = piecesImages.Count / 2;
 
         isGameOver = false;
+
+        NullButton();
     }
 
     private void Update()
@@ -81,9 +83,18 @@ public class GameManager : MonoBehaviour
 
     public void NullButton()
     {
-        if (EventSystem.current.currentSelectedGameObject == null)
+        if (!isGameOver)
         {
-            EventSystem.current.SetSelectedGameObject(FindObjectOfType<Button>().gameObject);
+            if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                int i = 0;
+                Transform bg = GetComponent<InstantiateButtons>().Background;
+                while (i >= buttons.Count || !bg.GetChild(i).GetComponent<Button>().interactable)
+                {
+                    i++;
+                }
+                EventSystem.current.SetSelectedGameObject(bg.GetChild(i).gameObject);
+            }
         }
     }
 

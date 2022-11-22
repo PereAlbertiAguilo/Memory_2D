@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InstantiateButtons : MonoBehaviour
 {
-    [SerializeField] private Transform Background;
+    public Transform Background;
 
     [SerializeField] private GameObject button;
 

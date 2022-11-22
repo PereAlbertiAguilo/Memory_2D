@@ -69,10 +69,8 @@ public class PauseMenu : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1;
             pausePanel.SetActive(false);
-            if (!pausePanel.activeInHierarchy)
-            {
-                GetComponent<GameManager>().NullButton();
-            }
+            EventSystem.current.SetSelectedGameObject(null);
+            GetComponent<GameManager>().NullButton();
         }
     }
 

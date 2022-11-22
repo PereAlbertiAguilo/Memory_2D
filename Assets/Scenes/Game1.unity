@@ -304,11 +304,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 80101272}
-    - target: {fileID: 348107593363723981, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SFX
-      objectReference: {fileID: 0}
     - target: {fileID: 999963236572451951, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 80101272}
+    - target: {fileID: 999963237180982830, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 80101272}
@@ -400,17 +400,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1384931858}
-    - target: {fileID: 999963237324572692, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1744240717
-      objectReference: {fileID: 0}
     - target: {fileID: 999963237324572695, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 999963237324572695, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 999963237338238587, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -432,10 +424,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 80101272}
-    - target: {fileID: 1932995404394035635, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Music
-      objectReference: {fileID: 0}
     - target: {fileID: 5509274047916350162, guid: 6b8439108e519ce4ebe6430dfbe23cf2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
